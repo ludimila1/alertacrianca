@@ -1,0 +1,71 @@
+HTML
+
+<div id="menu_general">
+			<div id="menu_left">
+				<ul>
+                    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn"> MENU </a>
+                        <div class="dropdown-content">
+                            <a href="index.html"> Início </a>
+                            <a href=""> ... </a>
+                            <a href="login.html"> Login </a>
+                        </div>
+                    </li>
+				</ul>
+			</div>
+			<div id="menu_right">
+                <a href="index.html"><img id="menu_logo" src="../media/Logo.jpg"></a>
+			</div>
+		</div>
+
+
+CSS 
+
+
+#menu {
+	/*background-color: lightblue;
+	width: 100%;*/
+	margin: 0 auto;
+}
+
+#menu_left {
+	background-color: lightblue;
+	width: 50%;
+	height: 9%;
+	float: left;
+	margin: 0 auto;
+}
+
+#menu_left ul {
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+
+#menu_left ul li {
+	display: inline;
+	font-size: 25px;
+}
+
+#menu_left ul li a {
+	text-decoration: none;
+	color: darkred;
+	padding: 1.6% 4% 1.6% 4%;
+}
+
+#menu_left ul li a:hover {
+	background-color: blue;
+}
+
+#menu_right {
+	background-color: lightblue;
+	width: 50%;
+	height: 9%;
+	float: right;
+	margin: 0 auto;
+}
+
+#menu_logo {
+	float: right;
+	height: 5.7rem;
+	width: 5.7rem;
+}

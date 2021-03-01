@@ -1,52 +1,58 @@
-#menu {
-	/*background-color: lightblue;
-	width: 100%;*/
-	margin: 0 auto;
+#navigation {
+	background-color: #64b5f6; /*#ee6e73*/
 }
 
-#menu_left {
-	background-color: lightblue;
-	width: 50%;
-	height: 9%;
-	float: left;
-	margin: 0 auto;
+#menu_general {
+	padding-left: 2rem;
 }
 
-#menu_left ul {
-	float: left;
-	width: 50%;
-	text-align: center;
+.menu{
+	list-style:none;
+	float:left;
+}
+	
+.menu li{
+	position:relative;
+	float:left;
 }
 
-#menu_left ul li {
-	display: inline;
-	font-size: 25px;
+.menu li a{
+	color: black;
+	text-decoration:none;
+	display:block;
 }
 
-#menu_left ul li a {
-	text-decoration: none;
-	color: darkred;
-	padding: 1.6% 4% 1.6% 4%;
+.menu li a:hover{
+	background: lightblue; /*#df4a16*/
+	color: #fff;
+	-moz-box-shadow: 0 3px 10px 0 #CCC;
+	-webkit-box-shadow: 0 3px 3px 0 blue;
+	text-shadow: 0px 0px 5px #fff;
 }
 
-#menu_left ul li a:hover {
-	background-color: blue;
+.menu li ul{
+	position:absolute;
+	background-color:#fff;
+	display:none;
 }
-
-#menu_right {
-	background-color: lightblue;
-	width: 50%;
-	height: 9%;
-	float: right;
-	margin: 0 auto;
+	
+.menu li:hover ul, .menu li.over ul{
+	display:block;
 }
-
-#menu_logo {
-	float: right;
-	height: 5.7rem;
-	width: 5.7rem;
+	
+.menu li ul li{
+	border: 1px solid #c0c0c0;
+	display: block;
+	width: 6.72rem;
 }
 
 .main_title {
     text-align: center;
+}
+
+#menu_logo {
+	position: relative;
+	float: right;
+	height: 4.26rem;
+	width: 4.26rem;
 }
