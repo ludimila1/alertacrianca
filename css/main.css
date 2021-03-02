@@ -1,9 +1,15 @@
-#navigation {
-	background-color: #64b5f6; /*#ee6e73*/
+body {
+	background-color: #4F4F4F;
 }
 
-#menu_general {
+#navigation {
+	background-color: #64b5f6; /*#ee6e73*/
+	height: 5rem;
+}
+
+#menu-general {
 	padding-left: 2rem;
+	padding-top: 0.35rem;
 }
 
 .menu{
@@ -12,21 +18,23 @@
 }
 	
 .menu li{
-	position:relative;
+	position: relative;
 	float:left;
 }
 
 .menu li a{
+	text-align: center;
+	width: 7rem;
 	color: black;
 	text-decoration:none;
 	display:block;
 }
 
 .menu li a:hover{
-	background: lightblue; /*#df4a16*/
+	background: #64b5f6; /*#df4a16*/
 	color: #fff;
 	-moz-box-shadow: 0 3px 10px 0 #CCC;
-	-webkit-box-shadow: 0 3px 3px 0 blue;
+	-webkit-box-shadow: 0 0px 3px 0 blue;
 	text-shadow: 0px 0px 5px #fff;
 }
 
@@ -41,18 +49,29 @@
 }
 	
 .menu li ul li{
+	text-align: center;
 	border: 1px solid #c0c0c0;
 	display: block;
-	width: 6.72rem;
+	width: 7rem;
 }
 
-.main_title {
+.main-title {
     text-align: center;
 }
 
-#menu_logo {
+#menu-logo {
+	display: block;
 	position: relative;
 	float: right;
-	height: 4.26rem;
-	width: 4.26rem;
+	height: 5rem;
+	width: 5rem;
 }
+
+/*#logo-central {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 5rem;
+	width: 5rem;
+	background-color: black;
+}*/
