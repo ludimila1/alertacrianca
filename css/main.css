@@ -80,71 +80,6 @@ body {
 	width: 14rem;
 }
 
-.cards {
-	margin-left: auto;
-	margin-right: auto;
-  	margin-bottom: 20px;
-}
-
-.cards:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-  
-.cards .col {
-	float: right;
-	-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-	padding: 0 0.75rem;
-	min-height: 1px;
-}
-  
-.cards .col[class*="push-"], .cards .col[class*="pull-"] {
-	position: relative;
-}
-
-.cards .col.s1 {
-	margin-top: 10rem;
-	width: 8.3333333333%;
-	left: auto;
-	right: auto;
-}
-  
-.cards .col.s2 {
-	margin-top: 10rem;
-	width: 16.6666666667%;
-	left: auto;
-	right: auto;
-}
-
-.cards .col.s3 {
-	margin-top: 10rem;
-	left: auto;
-	right: auto;
-  }
-
-.cards .col.s4 {
-	margin-top: 10rem;
-	left: auto;
-	right: auto;
-  }
-
-.cards .col.s12 {
-  	margin-top: 10rem;
-  	width: 100%;
-  	margin-left: auto;
-  	left: auto;
-  	right: auto;
-}
-
-.cards .col.m7 {
-    width: 58.3333333333%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-}
-
 .cartao {
   	position: relative;
   	margin: 0.5rem 0 1rem 0;
@@ -153,7 +88,7 @@ body {
   	transition: -webkit-box-shadow .25s;
   	transition: box-shadow .25s;
   	transition: box-shadow .25s, -webkit-box-shadow .25s;
-  	border-radius: 2px;
+  	border-radius: 4px 4px 4px 4px;
 }
 
 .cartao .cartao-image {
@@ -162,7 +97,7 @@ body {
 
 .cartao .cartao-image img {
   	display: block;
-  	border-radius: 2px 2px 0 0;
+  	border-radius: 4px 4px 0px 0px;
   	position: relative;
   	left: 0;
   	right: 0;
@@ -175,8 +110,18 @@ body {
 .cartao .cartao-action {
   	background-color: inherit;
   	border-top: 1px solid rgba(160, 160, 160, 0.2);
+	border-radius: 0px 0px 4px 4px;
   	position: relative;
   	padding: 16px 24px;
+}
+
+div.container{
+    display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100vw;
+	height: calc(100vh - 5rem);
 }
 
 /*
