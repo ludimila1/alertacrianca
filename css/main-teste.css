@@ -179,6 +179,16 @@ body {
   	padding: 16px 24px;
 }
 
+div.container{
+    display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 33%;
+	left: auto;
+	right: auto;
+}
+
 /*
 
 */
