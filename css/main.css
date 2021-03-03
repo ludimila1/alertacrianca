@@ -4,6 +4,7 @@ body {
 	#c7cff3 46.67%, #cdcdf2 50%, #d3cbf0 53.33%, #d9caed 56.67%, #dfc8ea 60%, #e4c7e6 63.33%, #e9c6e2 66.67%, #edc5dd 70%, #f1c4d8 73.33%,
 	#f3c3d3 76.67%, #f5c3ce 80%, #f6c3c9 83.33%, #f7c4c4 86.67%, #f7c4c0 90%, #f6c5bb 93.33%, #f4c6b7 96.67%, #f1c7b4 100%);
 	margin: 0;
+	padding: 0;
 	height: 100vh;
 	width:  100vw;
 }
@@ -122,11 +123,10 @@ div.conteudo{
 	justify-content: space-around;
 	align-items: center;
 	width: 100vw;
-	height: calc(100vh - 13rem);
+	height: calc(100vh - 5rem);
 	padding: 15rem;
 }
 
 /*
 
 */
- 
