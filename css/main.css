@@ -3,8 +3,8 @@ body {
 	#9fdae3 16.67%, #a0d9e7 20%, #a2d8eb 23.33%, #a6d7ee 26.67%, #aad6f0 30%, #aed5f2 33.33%, #b4d4f4 36.67%, #bad2f4 40%, #c0d0f4 43.33%,
 	#c7cff3 46.67%, #cdcdf2 50%, #d3cbf0 53.33%, #d9caed 56.67%, #dfc8ea 60%, #e4c7e6 63.33%, #e9c6e2 66.67%, #edc5dd 70%, #f1c4d8 73.33%,
 	#f3c3d3 76.67%, #f5c3ce 80%, #f6c3c9 83.33%, #f7c4c4 86.67%, #f7c4c0 90%, #f6c5bb 93.33%, #f4c6b7 96.67%, #f1c7b4 100%);
-	margin: 0;
-	padding: 0;
+	padding: 0 !important;
+	margin: 0 !important;
 	height: 100vh;
 	width:  100vw;
 }
@@ -97,8 +97,9 @@ div.conteudo{
 	justify-content: space-between;
 	align-items: center;
 	width: 100vw;
-	height: calc(100vh - 5rem);
+	height: calc(100vh - 13rem);
 	padding: 5rem;
+	margin-top: 8rem;
 }
 
 .cartao .cartao-image {
@@ -150,6 +151,52 @@ div.conteudo-quebrando{
 	height: 40rem;
 	width: 30rem;
 }
+
+.rodape {
+	padding-top: 20px;
+	color: #fff;
+	background-color: #ee6e73;
+	width: 90vw;
+}
+
+.linhas {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+  
+.rodape .rodape-copyright {
+	/*
+	overflow: hidden;
+	min-height: 50px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+		-ms-flex-align: center;
+			align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+			justify-content: space-between;
+			padding: 10px 0px;
+	color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(51, 51, 51, 0.08);
+	width: 100vw;
+	*/
+}
+
+.rodape-content {
+	/*
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 90%;
+	*/
+}
+
+
 /*
 
 */
