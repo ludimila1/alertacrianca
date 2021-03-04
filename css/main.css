@@ -5,16 +5,20 @@ body {
 	#f3c3d3 76.67%, #f5c3ce 80%, #f6c3c9 83.33%, #f7c4c4 86.67%, #f7c4c0 90%, #f6c5bb 93.33%, #f4c6b7 96.67%, #f1c7b4 100%);
 	padding: 0 !important;
 	margin: 0 !important;
-	height: 100vh;
-	width:  100vw;
+	/*height: 100vh;
+	width:  100vw;*/
+	overflow-x: hidden;
+	font-family: 'Times New Roman', Times, serif;
 }
 
-#navigation {
+.navigation {
 	background-color: #64b5f6; /*#ee6e73*/
 	height: 5rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding: 0 !important;
+	width: 100vw;
 	z-index: 9999;
 }
 
@@ -71,7 +75,8 @@ body {
 	position: relative;
 	float: right;
 	height: 5rem;
-	width: 5rem;
+	width: 6rem;
+	padding-right: 1rem;
 }
 
 #logo-central {
@@ -81,14 +86,14 @@ body {
 }
 
 .cartao {
-  	position: relative;
-  	margin: 0.5rem 0 10rem 0;
-  	background-color: white;
-  	-webkit-transition: -webkit-box-shadow .25s;
-  	transition: -webkit-box-shadow .25s;
-  	transition: box-shadow .25s;
-  	transition: box-shadow .25s, -webkit-box-shadow .25s;
-  	border-radius: 4px 4px 4px 4px;
+	position: relative;
+	background-color: white;
+	-webkit-transition: -webkit-box-shadow .25s;
+	transition: -webkit-box-shadow .25s;
+	transition: box-shadow .25s;
+	transition: box-shadow .25s, -webkit-box-shadow .25s;
+	border-radius: 4px 4px 4px 4px;
+	height: 35rem;
 }
 
 div.conteudo{
@@ -97,9 +102,9 @@ div.conteudo{
 	justify-content: space-between;
 	align-items: center;
 	width: 100vw;
-	height: calc(100vh - 13rem);
+	height: 100vh;/*calc(100vh - 10rem)*/
 	padding: 5rem;
-	margin-top: 8rem;
+	/*margin-top: 8rem;*/
 }
 
 .cartao .cartao-image {
@@ -129,18 +134,28 @@ div.conteudo{
 div.conteudo-quebrando{
     display: flex;
     flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	width: 100vw;
-	height: calc(100vh - 5rem);
-	padding: 15rem;
+	height: calc(100vh - 10rem);
 }
 
-.cartao .cartao-image-quebrando {
+.cartao-quebrando {
+	position: relative;
+	background-color: white;
+	-webkit-transition: -webkit-box-shadow .25s;
+	transition: -webkit-box-shadow .25s;
+	transition: box-shadow .25s;
+	transition: box-shadow .25s, -webkit-box-shadow .25s;
+	border-radius: 4px 4px 4px 4px;
+	margin: 5rem 0 10rem 0;
+}
+
+.cartao-quebrando .cartao-image-quebrando {
 	position: relative;
 }
 
-.cartao .cartao-image-quebrando img {
+.cartao-quebrando .cartao-image-quebrando img {
 	display: block;
 	border-radius: 4px 4px 0px 0px;
 	position: relative;
@@ -153,20 +168,18 @@ div.conteudo-quebrando{
 }
 
 .rodape {
-	padding-top: 20px;
 	color: #fff;
-	background-color: #ee6e73;
-	width: 90vw;
+	background-color: #0072cf;/*#64b5f6*/
+	padding: 0 !important;
+	margin-bottom: 0 !important;
 }
 
 .linhas {
-	margin-left: auto;
-	margin-right: auto;
 	margin-bottom: 20px;
 }
   
 .rodape .rodape-copyright {
-	/*
+	
 	overflow: hidden;
 	min-height: 50px;
 	display: -webkit-box;
@@ -185,15 +198,41 @@ div.conteudo-quebrando{
 	color: rgba(255, 255, 255, 0.8);
 	background-color: rgba(51, 51, 51, 0.08);
 	width: 100vw;
-	*/
-}
+	
+}/**/
 
 .rodape-content {
-	/*
+	display: flex;
+	flex-direction: row;
 	margin: 0 auto;
 	max-width: 1280px;
 	width: 90%;
-	*/
+	justify-content: space-between;
+	
+}
+.rodape-web {
+	color: white;
+	font-size: 18px;
+}
+
+.rodape-web:hover {
+	color: black;
+}
+
+.rodape-content-copyright {
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 90%;
+	justify-content: space-between;
+	color: white;
+	
+}
+
+.rodape-text {
+
+	font-size: 18px;
 }
 
 
