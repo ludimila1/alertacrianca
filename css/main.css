@@ -15,15 +15,13 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-}
-
-#menu-general {
-	padding: auto;
+	z-index: 9999;
 }
 
 .menu{
 	list-style:none;
 	float:left;
+	z-index: 9999;
 }
 	
 .menu li{
@@ -93,6 +91,16 @@ body {
   	border-radius: 4px 4px 4px 4px;
 }
 
+div.conteudo{
+    display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100vw;
+	height: calc(100vh - 5rem);
+	padding: 5rem;
+}
+
 .cartao .cartao-image {
   	position: relative;
 }
@@ -105,8 +113,8 @@ body {
   	right: 0;
   	top: 0;
   	bottom: 0;
-  	height: 25rem;
-  	width: 25rem;
+  	height: 31rem;
+  	width: 35rem;
 }
 
 .cartao .cartao-action {
@@ -117,16 +125,31 @@ body {
   	padding: 16px 24px;
 }
 
-div.conteudo{
+div.conteudo-quebrando{
     display: flex;
     flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	width: 100vw;
 	height: calc(100vh - 5rem);
 	padding: 15rem;
 }
 
+.cartao .cartao-image-quebrando {
+	position: relative;
+}
+
+.cartao .cartao-image-quebrando img {
+	display: block;
+	border-radius: 4px 4px 0px 0px;
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	height: 40rem;
+	width: 30rem;
+}
 /*
 
 */
