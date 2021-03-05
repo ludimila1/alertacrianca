@@ -147,8 +147,9 @@ div.conteudo-quebrando{
 	transition: -webkit-box-shadow .25s;
 	transition: box-shadow .25s;
 	transition: box-shadow .25s, -webkit-box-shadow .25s;
-	border-radius: 4px 4px 4px 4px;
+	border-radius: 10px 10px 10px 10px;
 	margin: 5rem 0 10rem 0;
+	width: 30rem;
 }
 
 .cartao-quebrando .cartao-image-quebrando {
@@ -157,7 +158,7 @@ div.conteudo-quebrando{
 
 .cartao-quebrando .cartao-image-quebrando img {
 	display: block;
-	border-radius: 4px 4px 0px 0px;
+	border-radius: 10px 10px 10px 10px;
 	position: relative;
 	left: 0;
 	right: 0;
@@ -165,6 +166,16 @@ div.conteudo-quebrando{
 	bottom: 0;
 	height: 40rem;
 	width: 30rem;
+}
+
+.cartao-quebrando .cartao-action {
+	background-color: inherit;
+	border-top: 1px solid rgba(160, 160, 160, 0.2);
+  	border-radius: 0px 0px 4px 4px;
+	position: relative;
+	padding: 16px 24px;
+	font-size: 20px;
+	word-wrap: break-word;
 }
 
 .rodape {
@@ -235,6 +246,10 @@ div.conteudo-quebrando{
 	font-size: 18px;
 }
 
+#rodape-cadastro {
+	padding-top: 12rem;
+	display: flex;
+}
 
 /*
 
