@@ -1,3 +1,8 @@
+/* TAGs GERAIS */
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-image: radial-gradient(circle at 4.55% 104.17%, #a9daca 0, #a5dbcf 3.33%, #a2dbd4 6.67%, #a0dbd9 10%, #9fdade 13.33%,
 	#9fdae3 16.67%, #a0d9e7 20%, #a2d8eb 23.33%, #a6d7ee 26.67%, #aad6f0 30%, #aed5f2 33.33%, #b4d4f4 36.67%, #bad2f4 40%, #c0d0f4 43.33%,
@@ -10,7 +15,9 @@ body {
 	overflow-x: hidden;
 	font-family: 'Times New Roman', Times, serif;
 }
+/* FIM TAGs */
 
+/* MENU */
 .navigation {
 	background-color: #64b5f6; /*#ee6e73*/
 	height: 5rem;
@@ -67,7 +74,8 @@ body {
 
 .main-title {
     text-align: center;
-	height: 5rem;
+	height: 3rem;
+	width: 99.3vw;
 }
 
 #menu-logo {
@@ -84,7 +92,19 @@ body {
 	height: 5rem;
 	width: 14rem;
 }
+/* FIM MENU */
 
+/* SWITCH ENTRE LOGIN/CADASTRO */
+.login-link {
+	color: #64b5f6;
+}
+
+.login-link:hover {
+	color: #0072cf;
+}
+/* FIM SWITCH */
+
+/* CARDS INDEX */
 .cartao {
 	position: relative;
 	background-color: white;
@@ -93,7 +113,12 @@ body {
 	transition: box-shadow .25s;
 	transition: box-shadow .25s, -webkit-box-shadow .25s;
 	border-radius: 4px 4px 4px 4px;
-	height: 35rem;
+	height: 31rem;
+	border-radius: 10px 10px 10px 10px;
+}
+
+.cartao:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 div.conteudo{
@@ -102,7 +127,7 @@ div.conteudo{
 	justify-content: space-between;
 	align-items: center;
 	width: 100vw;
-	height: 100vh;/*calc(100vh - 10rem)*/
+	height: calc(100vh - 4rem);/*100vh*/
 	padding: 5rem;
 	/*margin-top: 8rem;*/
 }
@@ -113,7 +138,7 @@ div.conteudo{
 
 .cartao .cartao-image img {
   	display: block;
-  	border-radius: 4px 4px 0px 0px;
+  	border-radius: 10px 10px 10px 10px;
   	position: relative;
   	left: 0;
   	right: 0;
@@ -122,15 +147,9 @@ div.conteudo{
   	height: 31rem;
   	width: 35rem;
 }
+/* FIM CARDS INDEX */
 
-.cartao .cartao-action {
-  	background-color: inherit;
-  	border-top: 1px solid rgba(160, 160, 160, 0.2);
-	border-radius: 0px 0px 4px 4px;
-  	position: relative;
-  	padding: 16px 24px;
-}
-
+/*CARDS QUEBRANDO */
 div.conteudo-quebrando{
     display: flex;
     flex-direction: row;
@@ -177,7 +196,9 @@ div.conteudo-quebrando{
 	font-size: 20px;
 	word-wrap: break-word;
 }
+/* FIM CARDS QUEBRANDO */
 
+/* RODAPE */
 .rodape {
 	color: #fff;
 	background-color: #0072cf;/*#64b5f6*/
@@ -210,6 +231,10 @@ div.conteudo-quebrando{
 	padding-right: 10rem;
 }
 
+.links li {
+	padding: 0.5rem;
+}
+
 .links h5 {
 	display: flex;
 	flex-direction: row;
@@ -234,7 +259,7 @@ div.conteudo-quebrando{
 	color: rgba(255, 255, 255, 0.8);
 	background-color: rgba(51, 51, 51, 0.08);
 	width: 100vw;
-}/**/
+}
 
 .rodape-content {
 	display: flex;
@@ -262,7 +287,6 @@ div.conteudo-quebrando{
 	width: 90%;
 	justify-content: space-between;
 	color: white;
-	
 }
 
 .rodape-text {
@@ -276,36 +300,52 @@ div.conteudo-quebrando{
 	display: flex;
 }
 
-.conteudo-subpages{
-    /*display: flex;
-    flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	width: 100vw;*/
-	height: 100vh;/*calc(100vh - 10rem)*/
-	/*padding: 5rem;
-	margin-top: 8rem;*/
+.rodape-imagem-box {
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
 }
 
-.conteudo-subpages p {
-	font-size: 18px;
-	margin: 3rem 10rem 0rem 10rem;
-	text-align: justify;
+.rodape-imagem {
+	display: flex;
+	height: 2rem;
+	width: 2rem;
 }
+/* FIM RODAPE */
 
-.destaque {
-	font-weight: bold;
+/* BOTÃO VOLTAR AO TOPO */
+.button-top {
+    display: flex;
+	float: right;
+    justify-content: center;
+    align-items: center;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #64b5f6;
+    text-decoration: none;
 }
+.button-top::after {
+    content: "↑";
+    font-size: 32px;
+    font-weight: bold;
+    color: aliceblue;
+    transition: margin-top 250ms;
+}
+.button-top:hover::after {
+    margin-top:-8px;
+}
+/* FIM BOTÃO */
 
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+/* FLIP CARDS */
 .flip-card {
 	background-color: transparent;
 	width: 35rem;
 	height: 35rem;
 	perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
-  
-  /* This container is needed to position the front and back side */
+
 .flip-card-interno {
 	position: relative;
 	width: 100%;
@@ -314,13 +354,11 @@ div.conteudo-quebrando{
 	transition: transform 0.5s;
 	transform-style: preserve-3d;
 }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
+
 .flip-card:hover .flip-card-interno {
 	transform: rotateY(180deg);
 }
-  
-  /* Position the front and back side */
+
 .flip-card-frente, .flip-card-costas {
 	position: absolute;
 	width: 100%;
@@ -328,8 +366,7 @@ div.conteudo-quebrando{
 	-webkit-backface-visibility: hidden; /* Safari */
 	backface-visibility: hidden;
 }
-  
-  /* Style the front side (fallback if image is missing) */
+
 .flip-card-frente {
 	background-color: #bbb;
 	color: black;
@@ -339,8 +376,7 @@ div.conteudo-quebrando{
 	height: 35rem;
 	width: 35rem;
 }
-  
-/* Style the back side */
+
 .flip-card-costas {
 	background-color: #64b5f6;
 	color: white;
@@ -359,11 +395,6 @@ div.conteudo-quebrando{
 	cursor: pointer;
 	transition-duration: 0.3s;
 }
-
-/*.flip-card-costas a {
-	text-decoration: none;
-	color: #fff;
-}*/
 
 .flip-card-costas button:hover {
 	background-color: #fff;
@@ -394,6 +425,221 @@ div.conteudo-quebrando{
 .card-botao {
 	height: 20%;
 }
+/* FIM FLIP CARDS */
+
+/* FLIP CARDS TIPOS DE VIOLÊNCIA */
+.conteudo-tipos{
+    display: flex;
+    flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 99.3vw;
+	height: calc(100vh - 20rem);
+	margin-top: 3rem;
+	margin-bottom: 5rem;
+	padding: 0rem 5rem 0rem 5rem;
+}
+
+.flip-card-tipos {
+	background-color: transparent;
+	width: 35rem;
+	height: 35rem;
+	perspective: 1000px; /*3D effect*/
+	border-radius: 50%;
+}
+
+.flip-card-tipos-interno {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.5s;
+	transform-style: preserve-3d;
+	border-radius: 50%;
+}
+
+.flip-card-tipos:hover .flip-card-tipos-interno {
+	transform: rotateY(180deg);
+	border-radius: 50%;
+}
+
+.flip-card-tipos-frente, .flip-card-tipos-costas {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+	border-radius: 50%;
+}
+
+.flip-card-tipos-frente {
+	background-color: #bbb;
+	color: black;
+	border-radius: 50%;
+}
+
+.flip-card-tipos-frente img {
+	height: 35rem;
+	width: 35rem;
+	border-radius: 50%;
+}
+
+.flip-card-tipos-costas {
+	background-color: #64b5f6;
+	color: white;
+	transform: rotateY(180deg);
+	border-radius: 50%;
+}
+
+.flip-card-tipos-costas p {
+	font-size: 22px;
+	text-align: justify;
+	padding: 1rem;
+	border-radius: 50%;
+}
+
+.card-tipos-conteudo {
+	width: 35rem;
+	height: 35rem;
+	border-radius: 50%;
+	margin: auto;
+	text-align: center;
+	/*justify-content: center;
+	align-items: center;*/
+}
+
+.left-shape{
+	border-radius: 50%;
+	shape-outside: polygon(
+		0 0,
+		100% 0,
+	
+		55% 5%,
+		20% 20%,
+		5% 35%,
+	
+		0 50%,
+	
+		5% 65%,
+		20% 80%,
+		55% 95%,
+	
+		100% 100%,
+		0 100%
+	);
+	float: left;
+	width: 50%;
+	height: 100%;
+	clip-path: polygon(
+		0 0,
+		100% 0,
+	
+		55% 5%,
+		20% 20%,
+		5% 35%,
+	
+		0 50%,
+	
+		5% 65%,
+		20% 80%,
+		55% 95%,
+	
+		100% 100%,
+		0 100%
+	);
+}
+  
+.right-shape{
+	border-radius: 50%;
+	shape-outside: polygon(
+		100% 0,
+		0 0,
+	
+		45% 5%,
+		80% 20%,
+		95% 35%,
+	
+		100% 50%,
+	
+		95% 65%,
+		80% 80%,
+		45% 95%,
+	
+		0 100%,
+		100% 100%
+	);
+	float: right;
+	width: 50%;
+	height: 100%;
+	clip-path: polygon(
+		100% 0,
+		0 0,
+	
+		45% 5%,
+		80% 20%,
+		95% 35%,
+	
+		100% 50%,
+	
+		95% 65%,
+		80% 80%,
+		45% 95%,
+	
+		0 100%,
+		100% 100%
+	);
+}
+
+.card-tipos-texto {
+	padding-top: 5rem;
+	text-align: center;
+}
+
+.flip-card-tipos-costas button {
+	background-color: #0072cf;
+  	border: none;
+  	color: #fff;
+  	padding: 15px 32px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+	cursor: pointer;
+	transition-duration: 0.3s;
+}
+
+.flip-card-tipos-costas button:hover {
+	background-color: #fff;
+	border: 1px solid #0072cf;
+	color: #0072cf;
+}
+/* FIM FLIP CARDS TIPOS */
+
+/* PÁGINA DIREITOS DAS CRIANÇAS */
+.direitos-page{
+    display: flex;
+    flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 99.3vw;
+	height: calc(100vh - 17rem);/*100vh*/
+}
+
+.video-direitos {
+	height: 520px;
+	width: 920px;
+	border-radius: 5px;
+}
+
+.direitos-image img {
+	height: 35rem;
+	width: 60rem;
+}
+
+
+
+/* FIM DIREITOS */
+
 /*
 
 */
