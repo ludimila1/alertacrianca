@@ -18,7 +18,7 @@
     if($dadosUser['usuario'] == $usuarioLogin){
         echo "certo usuário <br>";
         if($dadosUser['senha'] == $senhaCrypt){
-            $_SESSION['mensagem'] = "<div class='alert sucesso' role='alert'>Usuário logado com sucesso!</div>";
+            $_SESSION['mensagem'] = "<div class='alert sucesso' role='alert'>Usuário logado. Bom jogo $usuarioLogin!</div>";
             $_SESSION['logged'] = True;
             header("Location: http://localhost/Crianca_Alerta/pages/jogo.php");
             echo "certo senha";
