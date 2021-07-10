@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <html>
     <head>
         <!--Import Google Icon Font-->
@@ -5,28 +9,27 @@
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="./css/materialize.css"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="./css/main.css"/>
-        <!-- <script type="text/javascript" src="../js/main.js"></script> -->
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="shortcut icon" type="image/x-icon" href="./media/logo-rodape.png">
-        <title> Criança Alerta - Bem Vindo(a) </title>
-        <meta charset="UTF-8">      
+        <title> Criança Alerta | Bem Vindo(a) </title>
+        <meta charset="UTF-8">
     </head>
     <body>
         <nav class="navigation">
             <ul class="menu">
                 <li id="menu-general"><a href="">MENU</a>
                     <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="./pages/tipo_de_violencia.html">Tipos de Violência</a></li>
-                        <li><a href="./pages/quebrando_silencio.html">Quebrando o Silêncio</a></li>
-                        <li><a href="./pages/direitos.html">Direito das Crianças</a></li>
-                        <li><a href="./pages/login.html">Login</a></li>
+                        <li><a href="http://localhost/Crianca_Alerta/index.php">Início</a></li>
+                        <li><a href="http://localhost/Crianca_Alerta/pages/tipo_de_violencia.html">Tipos de Violência</a></li>
+                        <li><a href="http://localhost/Crianca_Alerta/pages/quebrando_silencio.html">Quebrando o Silêncio</a></li>
+                        <li><a href="http://localhost/Crianca_Alerta/pages/direitos.html">Direito das Crianças</a></li>
+                        <li><a href="http://localhost/Crianca_Alerta/pages/login.php">Jogue nosso jogo!</a></li>
                     </ul>
                 </li>
             </ul>
-            <a href="index.html"><img id="logo-central" src="./media/logo-nome.png"></a>
-            <a href="index.html"><img id="menu-logo" src="./media/logo-oficial.png"></a>
+            <a href="http://localhost/Crianca_Alerta/index.php"><img id="logo-central" src="./media/logo-nome.png"></a>
+            <a href="http://localhost/Crianca_Alerta/index.php"><img id="menu-logo" src="./media/logo-oficial.png"></a>
         </nav>
         <div class="conteudo">
             <div class="cartao">
@@ -59,19 +62,24 @@
                         <li><a class="rodape-web" href="https://instagram.com/crianca.alerta" target="_blank">Instagram</a></li>
                         <li><a class="rodape-web" href="https://github.com/criancaalerta" target="_blank">Github</a></li>
                         <li class="rodape-web">Projetocriancaalerta@outlook.com</li>
-                        <!--<li><a class="rodape-web" href="#!">Link 1</a></li>-->
                     </ul>
                 </div>
             </div>
             <div class="rodape-copyright">
                 <div class="rodape-content-copyright">
                     © 2021 All copyrights reserved to Criança Alerta LTDA
-                    <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
                 </div>
                 <div class="rodape-imagem-box">
                     <img src="./media/logo-rodape.png" class="rodape-imagem">
                 </div>
             </div>
         </footer>
+        <div id="mensagem">
+        <?php
+        echo $_SESSION['mensagem'];
+        unset($_SESSION['mensagem']);
+        ?>
+        </div>
+        <script src="./js/main.js"></script>
     </body>
 </html>

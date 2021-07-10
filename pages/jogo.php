@@ -1,3 +1,21 @@
+<?php
+    session_start();
+    include_once "../php/invalidUser.php";
+
+    $logged = $_SESSION['logged'] ?? NULL;
+
+    if (isset($_GET['logout']) && $_GET['logout'] == 1){
+        $_SESSION = array();
+        session_unset();
+        session_destroy();
+        header('Location: http://localhost/Crianca_Alerta/index.php');
+    }
+
+    if (!$logged){
+        header("Location: http://localhost/Crianca_Alerta/pages/login.php");
+    }
+?>
+
 <html>
     <head>
         <!--Import Google Icon Font-->
@@ -8,7 +26,7 @@
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="shortcut icon" type="image/x-icon" href="../media/logo-rodape.png">
-        <title> Criança Alerta | Direitos das Crianças </title>
+        <title> Criança Alerta | Jogue nosso jogo! </title>
         <meta charset="UTF-8">
     </head>
     <body>
@@ -20,49 +38,17 @@
                         <li><a href="http://localhost/Crianca_Alerta/pages/tipo_de_violencia.html">Tipos de Violência</a></li>
                         <li><a href="http://localhost/Crianca_Alerta/pages/quebrando_silencio.html">Quebrando o Silêncio</a></li>
                         <li><a href="http://localhost/Crianca_Alerta/pages/direitos.html">Direito das Crianças</a></li>
-                        <li><a href="http://localhost/Crianca_Alerta/pages/login.php">Jogue nosso jogo</a></li>
+                        <li><a href="?logout=1">Sair</a></li>
                     </ul>
                 </li>
+                <li id="menu-general"></li>
             </ul>
             <a href="http://localhost/Crianca_Alerta/index.php"><img id="logo-central" src="../media/logo-nome.png"></a>
             <a href="http://localhost/Crianca_Alerta/index.php"><img id="menu-logo" src="../media/logo-oficial.png"></a>
         </nav>
-        <h1 class="main-title">Direitos das Crianças</h1>
-        <div class="direitos-page">
-            <div class="direitos-image">
-                <img src="../media/quebrando5.jpg">
-            </div>
+        <div class="joguinho">
+            <iframe src="https://scratch.mit.edu/projects/531279850/embed" allowtransparency="true" width="1040" height="750" frameborder="0" scrolling="no" allowfullscreen></iframe>
         </div>
-        <div class="direitos-page">
-                <video controls class="video-direitos"> <!--VÍDEO-->
-                    <source src="../media/direitos-das-crianças.mp4" type="video/mp4">
-                        <object>
-                            <embed src="demo.mp4" type="application/x-shockwave-flash" allowfullscreen="false" allowscriptaccess="always">  		
-                        </object>
-                        Formato não suportado 
-                </video>
-        </div>
-        <div class="main-title">
-            <h2 class="main-title">Quais são os direitos das crianças</h2>
-        </div>
-        <div class="direitos-page-list"> <!--LISTA DE DIREITOS-->
-            <div class="lista-direitos">
-                <ul>
-                    <li>Ter uma educação de boa qualidade;</li>
-                    <li>Ter acesso à cultura e aos meios de comunicação e informação;</li>
-                    <li>Poder brincar com outras crianças da mesma idade;</li>
-                    <li>Não ser obrigado a trabalhar como adulto;</li>
-                    <li>Ter uma boa alimentação que dê ao organismo todos os nutrientes que precisam para crescer com saúde e energia;</li>
-                    <li>Receber assistência médica gratuita nos hospitais públicos sempre que precisarem de atendimento;</li>
-                    <li>Ser livre para ir e vir, conviver em sociedade e expressar ideias e sentimentos;</li>
-                    <li>Ter a proteção de uma família seja ela natural ou adotiva, ou de um lar oferecido pelo Estado se, por infelicidade, perderem os pais e parentes mais próximos;</li>
-                    <li>Não sofrer agressões físicas ou psicológicas por parte daqueles que são encarregados da proteção e educação ou de qualquer outro adulto;</li>
-                    <li>Ser beneficiada por direitos, sem nenhuma discriminação por raça, cor, sexo, língua, religião, país de origem, classe social ou riqueza e toda criança do mundo deve ter seus direitos respeitados;</li>
-                    <li>Ter desde o dia em que nasce um nome e uma nacionalidade, ou seja, ser cidadão de um país;</li>
-                </ul>
-            </div>
-        </div>
-        <a href="#" class="button-top"></a>
         <footer class="rodape">
             <div class="rodape-content">
                 <div class="linhas">
@@ -77,19 +63,24 @@
                         <li><a class="rodape-web" href="https://instagram.com/crianca.alerta" target="_blank">Instagram</a></li>
                         <li><a class="rodape-web" href="https://github.com/criancaalerta" target="_blank">Github</a></li>
                         <li class="rodape-web">Projetocriancaalerta@outlook.com</li>
-                        <!--<li><a class="rodape-web" href="#!">Link 1</a></li>-->
                     </ul>
                 </div>
             </div>
             <div class="rodape-copyright">
                 <div class="rodape-content-copyright">
                     © 2021 All copyrights reserved to Criança Alerta LTDA
-                    <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
                 </div>
                 <div class="rodape-imagem-box">
                     <img src="../media/logo-rodape.png" class="rodape-imagem">
                 </div>
             </div>
         </footer>
+        <div id="mensagem">
+        <?php
+        echo $_SESSION['mensagem'];
+        unset($_SESSION['mensagem']);
+        ?>
+        </div>
+        <script src="../js/main.js"></script>
     </body>
 </html>

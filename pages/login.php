@@ -1,6 +1,10 @@
+<?php
+    session_start();
+?>
+
 <html>
     <head>
-    <!--Import Google Icon Font-->
+        <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="../css/materialize.css"  media="screen,projection"/>
@@ -8,7 +12,7 @@
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="shortcut icon" type="image/x-icon" href="../media/logo-rodape.png">
-        <title> Criança Alerta - Log in </title>
+        <title> Criança Alerta | Faça seu login! </title>
         <meta charset="UTF-8">
     </head>
     <body>
@@ -16,16 +20,16 @@
             <ul class="menu">
                 <li id="menu-general"><a href="">MENU</a>
                     <ul>
-                        <li><a href="../index.html">Início</a></li>
-                        <li><a href="tipo_de_violencia.html">Tipos de Violência</a></li>
-                        <li><a href="quebrando_silencio.html">Quebrando o Silêncio</a></li>
-                        <li><a href="direitos.html">Direito das Crianças</a></li>
-                        <li><a href="login.html">Login</a></li>
+                        <li><a href="http://localhost/Crianca_Alerta/index.php">Início</a></li>
+                        <li><a href="http://localhost/Crianca_Alerta/pages/tipo_de_violencia.html">Tipos de Violência</a></li>
+                        <li><a href="http://localhost/Crianca_Alerta/pages/quebrando_silencio.html">Quebrando o Silêncio</a></li>
+                        <li><a href="http://localhost/Crianca_Alerta/pages/direitos.html">Direito das Crianças</a></li>
+                        <li><a href="http://localhost/Crianca_Alerta/pages/login.php">Jogue nosso jogo</a></li>
                     </ul>
                 </li>
             </ul>
-            <a href="../index.html"><img id="logo-central" src="../media/logo-nome.png"></a>
-            <a href="../index.html"><img id="menu-logo" src="../media/logo-oficial.png"></a>
+            <a href="http://localhost/Crianca_Alerta/index.php"><img id="logo-central" src="../media/logo-nome.png"></a>
+            <a href="http://localhost/Crianca_Alerta/index.php"><img id="menu-logo" src="../media/logo-oficial.png"></a>
         </nav>
         <div class="row">
             <div class="col s12 m4 offset-m4">
@@ -33,26 +37,25 @@
                     <div class="card-action #64b5f6 blue lighten-2 white-text">
                         <h3 style="text-align: center;">Login</h3>
                     </div>
-
-                     <div class="card-content">
-
-                         <div class="form-field">
-                             <label for="username">Nome de usuário</label>
-                             <input type="text" id="username">
-                         </div>
-
-                         <div class="form-field">
-                            <label for="password">Senha</label>
-                            <input type="password" id="password">
-                        </div>
-                        <div class="form-field">
-                           <button class="btn-large waves-effect #64b5f6 blue lighten-2" style="width:100%">Entrar</button>
-                        </div></br>
-                        <p style="text-align: center;"> Não tem cadastro?
-                        <a href="cadastro.html" class="login-link">Registre-se agora!</a></p>
+                    <div class="card-content">
+                        <form method="POST" action="../php/loginValidation.php">
+                            <div class="form-field">
+                                <label for="username">Nome de usuário</label>
+                                <input type="text" id="username" name="usuario">
+                            </div>
+                            <div class="form-field">
+                                <label for="password">Senha</label>
+                                <input type="password" id="password" name="senha">
+                            </div>
+                            <div class="form-field">
+                                <button class="btn-large waves-effect #64b5f6 blue lighten-2" style="width:100%">Entrar</button>
+                            </div></br>
+                            <p style="text-align: center;"> Não tem cadastro?
+                            <a href="cadastro.php" class="login-link">Registre-se agora!</a></p>
+                        </forn>
                      </div>
                 </div>
-             </div>
+            </div>
         </div>
         <footer class="rodape-login">
             <div class="rodape-content">
@@ -82,5 +85,12 @@
                 </div>
             </div>
         </footer>
+        <div id="mensagem">
+        <?php
+        echo $_SESSION['mensagem'];
+        unset($_SESSION['mensagem']);
+        ?>
+        </div>
+        <script src="../js/main.js"></script>
     </body>
 </html>
