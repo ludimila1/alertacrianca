@@ -1,3 +1,3 @@
 setInterval(() => {
     document.getElementById('mensagem').classList.add('mensagemNone')
-},3500)
+},3500000)

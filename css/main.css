@@ -32,11 +32,15 @@ body {
 }
 
 .sucesso {
-	background-color: green;
+	background-color: rgba(0, 128, 0, 0.8);
+	border-radius: 10px;
+	border: 1px solid white;
 }
 
 .erro {
-	background-color: red;
+	background-color: rgba(196, 52, 45, 0.8);
+	border-radius: 10px;
+	border: 1px solid white;
 }
 
 .mensagemNone {
